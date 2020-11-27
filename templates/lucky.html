@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block title %}Lucky Number{% endblock%} {% block
+content%}
+<div class="col-12">
+	<h1 class="display-1">Your lucky number is:</h1>
+</div>
+<div class="col-12">
+	<h2 class="display-3">{{lucky_num}}</h2>
+</div>
+<div class="col-12">
+	<h2 class="display-3">{{msg}}!</h2>
+</div>
+{% if lucky_num == 3 or lucky_num == 7 %}
+<div class="col-12">
+	<h2 class="display-3">That's my lucky number too!</h2>
+	<img
+		src="https://media.giphy.com/media/3fIobf8erdUJO/giphy.gif"
+		class="img-fluid border border-dark rounded mt-3"
+		alt=""
+		width="300px"
+	/>
+</div>
+{% else %}
+<div class="col-12">
+	<h2 class="display-3">I dont like {{lucky_num}}!</h2>
+	<img
+		src="https://media.giphy.com/media/5WmyaeDDlmb1m/giphy.gif"
+		class="img-fluid border border-dark rounded mt-3"
+		alt=""
+		width="300px"
+	/>
+</div>
+{% endif %} {% endblock %}

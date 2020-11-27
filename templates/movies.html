@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block title %}Movies{% endblock %} {% block
+content%}
+<div class="col-12">
+	<h1 class="display-3">All Movies</h1>
+</div>
+<div class="col-4 mt-2">
+	<div class="form-group">
+		<form action="/movies/new" method="POST">
+			<label for="">Add A Movie:</label>
+			<input
+				type="text"
+				class="form-control"
+				name="title"
+				id=""
+				placeholder="Enter A Movie Title..."
+			/>
+			<button type="submit" class="btn btn-block btn-primary mt-3">Submit</button>
+		</form>
+	</div>
+</div>
+<div class="col-12 mt-4">
+	<p class="display-4">Movies List:</p>
+	<ul style="list-style-type: none; padding: 0">
+		{% for movie in movies|sort %}
+		<li class="display-4">{{movie}}</li>
+		{% endfor %}
+	</ul>
+</div>
+
+{% endblock %}

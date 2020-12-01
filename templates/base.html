@@ -20,7 +20,7 @@
 	</head>
 	<body id="bootstrap-overrides">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<span class="navbar-brand mb-0 h1">Flask Template Demo</span>
+			<span class="navbar-brand mb-0 h1">Flask Survey Exercise</span>
 			<button
 				class="navbar-toggler"
 				type="button"
@@ -32,20 +32,6 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
 					<a class="nav-item nav-link" href="/">Home</a>
-
-					<a class="nav-item nav-link" href="/form">Greet V1</a>
-
-					<a class="nav-item nav-link" href="/form-2">Greet V2</a>
-
-					<a class="nav-item nav-link" href="/lucky">Lucky</a>
-
-					<a class="nav-item nav-link" href="/hello">Hello</a>
-
-					<a class="nav-item nav-link" href="/goodbye">Goodbye</a>
-
-					<a class="nav-item nav-link" href="/spell-form">Spell</a>
-
-					<a class="nav-item nav-link" href="/movies">Movies</a>
 				</div>
 				{% with messages = get_flashed_messages(with_categories=true) %} {% if
 				messages %}

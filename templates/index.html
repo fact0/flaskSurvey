@@ -1,8 +1,15 @@
-{% extends 'base.html' %} {% block title %}Home{% endblock%} {% block content%}
+{% extends 'base.html' %} {% block title %}Flask Survey{% endblock%} {% block content%}
 <div class="col-12">
-	<h1 class="display-3">Home Page</h1>
+	<p class="display-3">{{title}}</p>
 </div>
 <div class="col-12">
-	<p class="display-4">This is the home page, welcome!</p>
+	<p class="display-4 mt-4">{{instructions}}</p>
+</div>
+<div class="col-4">
+	<div class="form-group">
+		<form action="/questions/0">
+			<button type="submit" class="btn btn-block btn-primary mt-4">Go to Questions</button>
+		</form>
+	</div>
 </div>
 {% endblock %}

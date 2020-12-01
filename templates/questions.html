@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block title %}Greet V1{% endblock%} {% block
+content%}
+<div class="col-12">
+	<p class="display-3">{{ title }}</p>
+</div>
+<div class="col-12">
+	<p class="display-4">{{ question.question }}</p>
+</div>
+<div class="col-4">
+	<div class="form-group">
+		<form action="/answer" method="POST">
+			<label for="">Answer:</label>
+            {% for choice in question.choices %}
+            <p><input type="radio" name="answer" value="{{ choice }}"> {{ choice }}</p>
+            {% endfor %}
+			<button type="submit" class="btn btn-block btn-primary mt-3">Continue</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

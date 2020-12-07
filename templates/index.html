@@ -1,4 +1,5 @@
-{% extends 'base.html' %} {% block title %}Flask Survey{% endblock%} {% block content%}
+{% extends 'base.html' %} {% block title %}Flask Survey{% endblock%} {% block
+content%}
 <div class="col-12">
 	<p class="display-3">{{title}}</p>
 </div>
@@ -7,8 +8,10 @@
 </div>
 <div class="col-4">
 	<div class="form-group">
-		<form action="/questions/0">
-			<button type="submit" class="btn btn-block btn-primary mt-4">Go to Questions</button>
+		<form action="begin">
+			<button type="submit" class="btn btn-block btn-primary mt-4">
+				Go to Questions
+			</button>
 		</form>
 	</div>
 </div>
